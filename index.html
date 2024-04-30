@@ -4,36 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie-sample</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
+
   <body>
-    <script src="/top-movie.js"></script>
 
     <header>
+
       <div class="title-box">
         <h1 class="title">영화검색사이트</h1>
       </div>
-    </header>
 
-
-      <form class="search">
+      <form class="search" onsubmit="searchMovies(event)">
         <input
           id="searchbox"
           type="text"
           placeholder="검색어를 입력하세요"
           />
-        <button onclick="searchmovies()"
-        class="button">
+        <button class="button">
           <span>
-            <img src="images/baseline_search_white_36dp.png" alt="material-icon">
+            <img src="baseline_search_white_36dp.png" alt="material-icon">
           </span>
         </button>
       </form>
 
-    
-    <div class="cards">
+    </header>
 
-    </div>
+  <main>
+    <ul id="card-list">
+    </ul>
+  </main>
 
     <!-- <div class="movies">
       <section id="card-list">
@@ -49,8 +50,8 @@
             </li>
           </ul>
         </div> -->
-
-      <!-- </section> -->
     </div>
+
+    <script src="./src/main.js" type="module"></script>
   </body>
 </html>
